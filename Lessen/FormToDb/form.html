@@ -1,0 +1,65 @@
+<!Doctype html>
+<html lang="nl">
+<head>
+<title>Formulier naar db</title>
+<!-- De volgende lijn zorgt ervoor dat we de tekencodering kunnen gebruiken die bijna alle speciale tekens omvat die we in europa gebruiken  -->
+<meta charset="UTF-8">
+<!-- De naam van de auteur van deze pagina -->
+<meta name="author" content="Erwin Leemans">
+<!-- De korte uitleg over deze pagina -->
+<meta name="description" content="Een voorbeeld hoe je gegevens schrijft van formulier naar database dmv php">
+<!-- Deze regel zorgt er voor dat onze pagina zich automatisch aanpast aan eender welke breedte van scherm -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css"-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+</head>
+<body>
+<h1>Contact</h1>
+
+<form action="processForm.php" method="post">
+    <label for="name">Naam</label>
+    <input type="text" id="name" name="name">
+
+    <br>
+
+    <label for="message">Commentaar</label>
+    <textarea id="message" name="message"></textarea>
+
+    <br>
+
+    <label for="priority">Prioriteit</label>
+
+    <select id="priority" name="priority">
+        <option value="1">Laag</option>
+        <option value="2" selected>Matig</option>
+        <option value="3">Hoog</option>
+    </select>
+
+    <fieldset>
+        <legend>Type</legend>
+        <label>
+            <input type="radio" name="type" value="1" checked>
+            Klacht
+        </label>
+
+        <br>
+
+        <label>
+            <input type="radio" name="type" value="2">
+            Suggestie
+        </label>
+    </fieldset>
+
+    <label>
+        <input type="checkbox" name="terms">
+        Ik ga akkoord met de algemene voorwaarden.
+    </label>
+
+    <br>
+
+    <button>Zend</button>
+
+</form>
+
+</body>
+</html>
