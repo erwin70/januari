@@ -1,0 +1,456 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title>Alle kamers</title>
+    <!-- De volgende lijn zorgt ervoor dat we de tekencodering kunnen gebruiken die bijna alle speciale tekens omvat die we in europa gebruiken  -->
+    <meta charset="UTF-8">
+    <!-- De naam van de auteur van deze pagina -->
+    <meta name="author" content="Erwin Leemans">
+    <!-- De korte uitleg over deze pagina -->
+    <meta name="description" content=" Tabel met kamers">
+    <!-- Deze regel zorgt er voor dat onze pagina zich automatisch aanpast aan eender welke breedte van scherm -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style type="text/css">
+        body {
+            background: #dde1e7;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        .vuil {
+            background-color: white;
+            border-style: solid;
+            border-radius: 8px;
+            border-width: 4px;
+            border-color: yellow;
+            height: 35px;
+            width: 70px;
+
+        }
+
+        .nodig {
+            border-style: solid;
+            border-radius: 8px;
+            border-color: yellow;
+            background-color: yellow;
+            height: 35px;
+            width: 70px;
+        }
+
+        .late {
+            border-style: solid;
+            border-radius: 8px;
+            border-width: 4px;
+            border-color: yellow;
+            background-color: coral;
+            color: yellow;
+            height: 35px;
+            width: 70px;
+        }
+
+        .early {
+            border-style: solid;
+            border-radius: 8px;
+            border-width: 4px;
+            border-color: coral;
+            background-color: yellow;
+            height: 35px;
+            width: 70px;
+        }
+
+        .refresh {
+            border-style: solid;
+            border-radius: 8px;
+            border-width: 4px;
+            border-color: blue;
+            background-color: blue;
+            color: yellow;
+            height: 35px;
+            width: 70px;
+        }
+
+        .probleem {
+            border-style: solid;
+            border-radius: 8px;
+            border-color: red;
+            background-color: red;
+            color: yellow;
+            height: 35px;
+            width: 70px;
+        }
+
+    
+
+        .ghoofd {
+            height: 30px;
+            width: 140px;
+            border-radius: 8px;
+            border-style: solid;
+            border-color: green;
+        }
+
+        .hoofd {
+            height: 30px;
+            width: 70px;
+            border-radius: 8px;
+            border-style: solid;
+            border-color: green;
+        }
+
+        .keuze {
+            background-color: green;
+            color: white;
+            height: 30px;
+            width: 70px;
+            border-radius: 8px;
+        }
+
+        .klaar {
+            height: 30px;
+            width: 70px;
+            border-style: solid;
+            border-radius: 8px;
+            border-color: green;
+            background-color: green;
+            color: white;
+
+        }
+
+
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: green;
+            color: white;
+            height: 35px;
+            width: 70px;
+            border-radius: 8px;
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 70px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+            background-color: #ddd;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+
+    </style>
+
+    <script>
+        function ChangeToVuil() {
+            var element = document.getElementById("id90");
+            element.classList.remove("keuze");
+            element.classList.remove("klaar");
+            element.classList.remove("late");
+            element.classList.remove("early");
+            element.classList.remove("probleem");
+            element.classList.remove("nodig");
+            element.classList.toggle("vuil");
+
+        }
+
+        function ChangeToNodig() {
+            var element = document.getElementById("id90");
+            element.classList.remove("keuze");
+            element.classList.remove("klaar");
+            element.classList.remove("late");
+            element.classList.remove("early");
+            element.classList.remove("probleem");
+            element.classList.remove("vuil");
+            element.classList.toggle("nodig");
+
+        }
+
+        function ChangeToLate() {
+            var element = document.getElementById("id90");
+            element.classList.remove("keuze");
+            element.classList.remove("klaar");
+            element.classList.remove("nodig");
+            element.classList.remove("early");
+            element.classList.remove("probleem");
+            element.classList.remove("vuil");
+            element.classList.toggle("late");
+
+        }
+
+        function ChangeToEarly() {
+            var element = document.getElementById("id90");
+            element.classList.remove("keuze");
+            element.classList.remove("klaar");
+            element.classList.remove("nodig");
+            element.classList.remove("late");
+            element.classList.remove("probleem");
+            element.classList.remove("vuil");
+            element.classList.toggle("early");
+
+        }
+
+        function ChangeToKlaar() {
+            var element = document.getElementById("id90");
+            element.classList.remove("keuze");
+            element.classList.remove("late");
+            element.classList.remove("nodig");
+            element.classList.remove("early");
+            element.classList.remove("probleem");
+            element.classList.remove("vuil");
+            element.classList.toggle("klaar");
+
+        }
+
+        function ChangeToProbleem() {
+            var element = document.getElementById("id90");
+            element.classList.remove("keuze");
+            element.classList.remove("klaar");
+            element.classList.remove("nodig");
+            element.classList.remove("early");
+            element.classList.remove("late");
+            element.classList.remove("vuil");
+            element.classList.toggle("probleem");
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <center>
+            <table>
+                <tr>
+                    <th colspan="2"><button type="button" class="ghoofd">Standard</button></th>
+                    <th colspan="2"><button type="button" class="ghoofd">Confort</button></th>
+                    <th><button type="button" class="hoofd">Budget</button></th>
+                    <th><button type="button" class="hoofd">Suites</button></th>
+                    <th><button type="button" class="hoofd">Msuites</button></th>
+                </tr>
+                <tbody>
+                    <tr>
+                        <td><button class="late">01</button></td>
+                        <td><button type="button" class="keuze">16</button></td>
+                        <td><button type="button" class="early">32</button></td>
+                        <td><button type="button" class="keuze">52</button></td>
+                        <td><button type="button" class="keuze">72</button></td>
+                        <td>
+                            <div class="dropdown">
+                                <button class="keuze" id="id90">90</button>
+                                <div class="dropdown-content">
+                                    <button type="button" class="vuil" onclick="ChangeToVuil()">vuil</button>
+                                    <button type="button" class="nodig" onclick="ChangeToNodig()">nodig</button>
+                                    <button type="button" class="late" onclick="ChangeToLate()">laat uitchecken</button>
+                                    <button type="button" class="early" onclick="ChangeToEarly()">vroeg inchecken</button>
+                                    <button type="button" class="klaar" onclick="ChangeToKlaar()">klaar</button>
+                                    <button type="button" class="probleem" onclick="ChangeToProbleem()">probleem</button>
+                                </div>
+                            </div>
+                        </td>
+                        <td><button type="button" class="keuze">93</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">02</button></td>
+                        <td><button type="button" class="keuze">17</button></td>
+                        <td><button type="button" class="vuil">33</button></td>
+                        <td><button type="button" class="keuze">53</button></td>
+                        <td><button type="button" class="keuze">73</button></td>
+                        <td><button type="button" class="nodig">91</button></td>
+                        <td><button type="button" class="keuze">94</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">03</button></td>
+                        <td><button type="button" class="keuze">18</button></td>
+                        <td><button type="button" class="nodig">34</button></td>
+                        <td><button type="button" class="keuze">54</button></td>
+                        <td><button type="button" class="refresh">74</button></td>
+                        <td><button type="button" class="keuze">92</button></td>
+                        <td><button type="button" class="keuze">95</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">04</button></td>
+                        <td><button type="button" class="keuze">19</button></td>
+                        <td><button type="button" class="refresh">35</button></td>
+                        <td><button type="button" class="keuze">55</button></td>
+                        <td><button type="button" class="keuze">75</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze">96</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">05</button></td>
+                        <td><button type="button" class="keuze">20</button></td>
+                        <td><button type="button" class="keuze">36</button></td>
+                        <td><button type="button" class="nodig">56</button></td>
+                        <td><button type="button" class="keuze">76</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">06</button></td>
+                        <td><button type="button" class="vuil">21</button></td>
+                        <td><button type="button" class="keuze">37</button></td>
+                        <td><button type="button" class="keuze">57</button></td>
+                        <td><button type="button" class="keuze">77</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">07</button></td>
+                        <td><button type="button" class="keuze">22</button></td>
+                        <td><button type="button" class="keuze">38</button></td>
+                        <td><button type="button" class="probleem">58</button></td>
+                        <td><button type="button" class="keuze">78</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">08</button></td>
+                        <td><button type="button" class="keuze">23</button></td>
+                        <td><button type="button" class="keuze">39</button></td>
+                        <td><button type="button" class="keuze">59</button></td>
+                        <td><button type="button" class="keuze">79</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">09</button></td>
+                        <td><button type="button" class="keuze">24</button></td>
+                        <td><button type="button" class="keuze">40</button></td>
+                        <td><button type="button" class="keuze">60</button></td>
+                        <td><button type="button" class="keuze">80</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">10</button></td>
+                        <td><button type="button" class="keuze">25</button></td>
+                        <td><button type="button" class="keuze">41</button></td>
+                        <td><button type="button" class="keuze">61</button></td>
+                        <td><button type="button" class="keuze">81</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">11</button></td>
+                        <td><button type="button" class="keuze">26</button></td>
+                        <td><button type="button" class="keuze">42</button></td>
+                        <td><button type="button" class="keuze">62</button></td>
+                        <td><button type="button" class="keuze">82</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">12</button></td>
+                        <td><button type="button" class="keuze">27</button></td>
+                        <td><button type="button" class="keuze">43</button></td>
+                        <td><button type="button" class="keuze">63</button></td>
+                        <td><button type="button" class="keuze">83</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze">28</button></td>
+                        <td><button type="button" class="keuze">44</button></td>
+                        <td><button type="button" class="keuze">64</button></td>
+                        <td><button type="button" class="keuze">84</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">14</button></td>
+                        <td><button type="button" class="keuze">29</button></td>
+                        <td><button type="button" class="keuze">45</button></td>
+                        <td><button type="button" class="keuze">65</button></td>
+                        <td><button type="button" class="keuze">85</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze">15</button></td>
+                        <td><button type="button" class="keuze">30</button></td>
+                        <td><button type="button" class="keuze">46</button></td>
+                        <td><button type="button" class="keuze">66</button></td>
+                        <td><button type="button" class="keuze">86</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze">31</button></td>
+                        <td><button type="button" class="keuze">47</button></td>
+                        <td><button type="button" class="keuze">67</button></td>
+                        <td><button type="button" class="keuze">87</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze">48</button></td>
+                        <td><button type="button" class="keuze">68</button></td>
+                        <td><button type="button" class="keuze">88</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze">49</button></td>
+                        <td><button type="button" class="keuze">69</button></td>
+                        <td><button type="button" class="keuze">89</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze">50</button></td>
+                        <td><button type="button" class="keuze">70</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze">51</button></td>
+                        <td><button type="button" class="keuze">71</button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                        <td><button type="button" class="keuze"></button></td>
+                    </tr>
+                </tbody>
+            </table>
+    </center>
+</body>
+
+</html>

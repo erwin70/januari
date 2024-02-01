@@ -1,0 +1,8 @@
+
+
+
+INSERT INTO users(username, pwd, email) VALUES ('Arrash', 'Arash@Hotel', 'Arash@elderschans.nl');
+
+UPDATE users SET username = 'Rayanne', pwd = 'Rayanne@Hotel', email = 'Rayanne@elderschans.nl' where id = 1;
+
+DELETE FROM users WHERE id = 1;

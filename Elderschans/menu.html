@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elderschans home</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style_clock.css">
+</head>
+<body>
+    <div class="menubalk">
+    <div class="clock">
+            <div class="center-nut"></div>
+            <div class="center-nut2"></div>
+            <div class="indicators">
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+               <div></div>
+            </div>
+            <div class="sec-hand">
+               <div class="sec"></div>
+            </div>
+            <div class="min-hand">
+               <div class="min"></div>
+            </div>
+            <div class="hr-hand">
+               <div class="hr"></div>
+            </div>
+         </div>
+            <script>
+                const sec = document.querySelector(".sec");
+                const min = document.querySelector(".min");
+                const hr = document.querySelector(".hr");
+                setInterval(function(){
+                let time  = new Date();
+                let secs = time.getSeconds() * 6;
+                let mins = time.getMinutes() * 6;
+                let hrs = time.getHours() * 30;
+                sec.style.transform = `rotateZ(${secs}deg)`;
+                min.style.transform = `rotateZ(${mins}deg)`;
+                hr.style.transform = `rotateZ(${hrs+(mins/12)}deg)`;
+                });
+            </script>
+    <ul><br>
+        <li><a href="Kamers.html" target="home">Schoonmaaklijst</a></li><br>
+        <li><a href="Fietsverhuur.html" target="home">Fietsverhuur</a></li><br>
+        <li>Agenda</li>
+            <ul class="agenda">
+                <li><a href="https://calendar.google.com/calendar/embed?src=ef31bdae30eb900036e446e2f99d9a7df372ec45ff01efc3cd6a3a1ffd054a8d%40group.calendar.google.com&ctz=Europe%2FAmsterdam" target="home">Receptie</a></li>
+                <li><a href="https://calendar.google.com/calendar/embed?src=805c4818e960b9f54f30524f6e6a6aeb04abc88e7a0dd39526c43265c5afec3d%40group.calendar.google.com&ctz=Europe%2FAmsterdam"  target="home">Houskeeping</a></li>
+                <li><a href="https://calendar.google.com/calendar/embed?src=1637f3f1b2556287e53db028557645d7013b3664252e51b9c0b1bc403268284b%40group.calendar.google.com&ctz=Europe%2FAmsterdam" target="home">Reparatie</a></li>
+                <li><a href="https://calendar.google.com/calendar/embed?src=f35f97ed8c25110178da1ce11463eb98028a0871843051acf1e0bb9929575d92%40group.calendar.google.com&ctz=Europe%2FAmsterdam" target="home">Keuken</a></li>
+                <li><a href="https://calendar.google.com/calendar/embed?src=f9b608998e4e4071206d630fc3016cf6741065db59ac6f95c5d57de5f9c2e12d%40group.calendar.google.com&ctz=Europe%2FAmsterdam" target="home">Fietsen</a></li>
+                <li><a href="https://calendar.google.com/calendar/u/0/r" target="_blank">Agenda bewerken</a></li>
+                <li><a href="https://calendar.google.com/calendar/u/0/r/agenda" target="_blank">Agenda planning</a></li>
+                
+            </ul><br>
+        <li><a href="Chat/index.php" target="home">Chat</a></li><br>
+        <li><a href="calculator.html" target="home">Rekenmachine</a></li><br>
+    </ul>
+</div>
+</body>
+</html>

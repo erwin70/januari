@@ -1,0 +1,61 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+text-decoration: none;
+
+}
+
+body{
+    background: #dde1e7;
+
+}
+
+nav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding: 20px;
+}
+
+.menu {  
+ height: 850px;
+width: 240px;
+background: white;
+text-align: center;
+border: 0px;
+}
+
+.home{
+    height: 850px;
+    width: 1500px;
+    background: white;
+    text-align: center;
+    border: 0px;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    list-style: none;
+    background: blue;
+    padding: 10px 4px;
+}
+:active{
+    color: beige;
+}
+
+::after{
+    color: beige;
+}
+
+a{
+color: beige;
+}
+
+
+
