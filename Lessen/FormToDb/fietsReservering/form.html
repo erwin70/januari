@@ -1,0 +1,53 @@
+<!Doctype html>
+<html lang="nl">
+<head>
+<title>Fiets reservatie</title>
+<!-- De volgende lijn zorgt ervoor dat we de tekencodering kunnen gebruiken die bijna alle speciale tekens omvat die we in europa gebruiken  -->
+<meta charset="UTF-8">
+<!-- De naam van de auteur van deze pagina -->
+<meta name="author" content="Erwin Leemans">
+<!-- De korte uitleg over deze pagina -->
+<meta name="description" content="Document voor fiets resevatie in Hotel Elderschans">
+<!-- Deze regel zorgt er voor dat onze pagina zich automatisch aanpast aan eender welke breedte van scherm -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css"-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+</head>
+<body>
+<h1>Fietsverhuur</h1>
+
+<form action="processForm.php" method="post">
+
+    <label for="datum_s">Datum start</label>
+    <input type="date" id="datum_s" name="datum_s">
+
+    <label for="datum_e">Datum einde</label>
+    <input type="date" id="datum_e" name="datum_e">
+
+    <label for="name">Naam</label>
+    <input type="text" id="naam" name="naam">
+
+    <label for="kamer">Kamer</label>
+    <input type="text" id="kamer" name="kamer">
+
+    <label for="tel">Telefoon nummer</label>
+    <input type="text" id="tel" name="tel">
+    
+    <label for="mail">E-mail</label>
+    <input type="text" id="mail" name="mail">
+
+    <label for="ebike">E-bike</label>
+    <input type="text" id="ebike" name="ebike">
+
+    <label for="h_fiets">Heren fiets</label>
+    <input type="text" id="h_fiets" name="h_fiets">
+
+    <label for="m_fiets">Dames fiets</label>
+    <input type="text" id="d_fiets" name="d_fiets">
+
+    <button>Zend</button>
+
+</form>
+
+</body>
+</html>

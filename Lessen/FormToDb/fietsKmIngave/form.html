@@ -1,0 +1,42 @@
+<!Doctype html>
+<html lang="nl">
+<head>
+<title>Formulier naar db</title>
+<!-- De volgende lijn zorgt ervoor dat we de tekencodering kunnen gebruiken die bijna alle speciale tekens omvat die we in europa gebruiken  -->
+<meta charset="UTF-8">
+<!-- De naam van de auteur van deze pagina -->
+<meta name="author" content="Erwin Leemans">
+<!-- De korte uitleg over deze pagina -->
+<meta name="description" content="Een voorbeeld hoe je gegevens schrijft van formulier naar database dmv php">
+<!-- Deze regel zorgt er voor dat onze pagina zich automatisch aanpast aan eender welke breedte van scherm -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/light.min.css"-->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.min.css">
+</head>
+<body>
+<h1>Fietsen</h1>
+
+<form action="processForm.php" method="post">
+    <label for="nr">Nummer fiets</label>
+    <input type="text" id="nr" name="nr">
+
+    <br>
+
+    <select id="soort" name="soort">
+        <option value="1">E-bike</option>
+        <option value="2">Dames fiets</option> 
+        <option value="3">Heren fiets</option>      
+    </select>
+    <br>
+
+    <label for="km">Kilometer stand</label>
+    <input type="text" id="km" name="km">
+
+    <br>
+
+    <button>Zend</button>
+
+</form>
+
+</body>
+</html>
